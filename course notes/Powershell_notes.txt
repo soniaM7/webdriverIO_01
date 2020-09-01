@@ -1,0 +1,13 @@
+1. Set-ExecutionPolicy RemoteSigned --execution policy to remote signed. Quickly setting the enviornment.
+
+2. Install-PackageProvider NuGet --NuGet is a open source window provider program that allows you to management window machine.
+3. Install-Module PSWindowsUpdate --this allows you to control and actually detect and even install windows update on powershell command line.
+4. Get-WindowsUpdate
+
+start-Transcript  --for history to the session
+Get-Command  --all script
+Get-Command -Noun service  --return object with Service
+Get-service
+Get-help
+Get-Help Set-ExecutionPolicy -Examples
+Get-Alias cls   

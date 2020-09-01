@@ -1,0 +1,7 @@
+Difficuties faced.
+
+1.Writing testcase which take testdata from json file.
+2. Injecting java script in the testcase.
+3. Handling browser windows. // sometime after operation new window opens. to take browser focus to that window. var tabIds = browser.getTabIds(); browser.switchTab(tabIds[1])
+4. Compatability issue. Posted in https://www.udemy.com/course/automation-testing-javascript-webdriverio-selenium-more/learn/lecture/12942364#questions/12070146
+5.$ allure generate C:/sonia/udemy learning/webdriverioFramework/reports/allure-results 

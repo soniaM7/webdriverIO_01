@@ -1,0 +1,28 @@
+npm init // for packet.json
+$ npm install -save-dev webdriverio@4.13.2 ////-dev because we use in the process of development .we always use -save-dev for install dependencies.
+$ npm install -save-dev mocha@5.2.0 selenium-standalone@6.15.3
+$ npm install // if node module folder deletes .
+$ ./node_modules/.bin/selenium-standalone install
+$ ./node_modules/.bin/selenium-standalone start
+$ npm install wdio-selenium-standalone-service -save-dev  // after this service we need not to start selenium-standalone server every time we run testcase.
+$ npm test -- --baseUrl="http://www.google.com"
+$ SERVER=prod npm test
+$ npm test -- --logLevel=verbose  // additional logging to the console window. //if we pass parameter in command it override the configration. for ex in wdio.config file logLevel=silent and with this command  it will overide to verbose.
+$ npm install chai@latest -save-dev
+command to run test: $ npm test -- --specs=test/ajaxClickTest.js
+$ npm install --save-dev sync-request
+$ npm install wdio-junit-reporter --save-dev
+$ npm install wdio-json-reporter@^0.4.0 --save-dev
+npm install wdio-allure-reporter --save-dev
+npm install -g allure-commandline --save-dev
+$ allure generate ./reports/allure-results if it gives error report is in use then... $ allure generate ./reports/allure-results --clean
+$ allure open
+$ npm install del --save-dev
+$ java -jar jenkins.war --httpPort=5555
+
+
+After this create a wdio config file through command: 
+./node_modules/.bin/wdio
+ 
+
+ 

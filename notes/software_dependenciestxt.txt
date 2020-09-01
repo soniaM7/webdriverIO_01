@@ -1,0 +1,12 @@
+Software downloaded for the course
+1. gitbash
+2. node.js
+4. Sublime editor
+
+
+Dependencies from https://www.npmjs.com/package/webdriverio
+1. webdriverio
+2. mocha
+3 selenium-standalone
+4. chai
+5. sync-request

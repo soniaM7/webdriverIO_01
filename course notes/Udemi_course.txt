@@ -1,0 +1,10 @@
+1.what is webdriverIO?
+Next-gen browser and mobile automation test framework for Node.js.
+
+2.Mocha - is a feature-rich JavaScript test framework running on Node.js and in the browser, making asynchronous testing simple and fun.
+
+3.Chai - is an assertion library that is often used alongside Mocha. It provides functions and methods that help you compare the output of a certain test with its expected value. 
+
+4. Node js - is a open source cross-plateform java script run time enviornment that exicute java script code outside browser.
+5. NPM - is a packet manager for javascript programming language is a defalt packet manager for javascript run time enviornment called nodeJS.
+6. Packet.json - file is a  effective way to handle our dependencies(library) for our framework.

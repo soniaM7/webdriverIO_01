@@ -1,0 +1,115 @@
+Logins: 
+Jenkins username: sonia password: Sonia@12345
+Git: soniaM7 pass 9466832253s
+
+
+1.what is webdriverIO?
+Next-gen browser and mobile automation test framework for Node.js.
+	WebdriverIO is an open source testing utility for Nodejs.
+	Main advantage of using wdio file is : it simplifies the process of contruction an automation framework.
+	https://webdriver.io/docs/gettingstarted.html
+	wdio is configuration file the settings we pass to our test.
+
+2.Mocha - is a feature-rich JavaScript test framework running on Node.js and in the browser, making asynchronous testing simple and fun. 
+Mocha is a great way to construct our test.
+its methods are describe and it. 
+describe is a simple way to group series of test together. 
+first argument is the name of test group.
+second argument is call back function. callback function is a function that is to be expected after another function has finished executing.
+it: It is easy way to describe indiviual test case which is nested inside the describe block.
+
+
+3.Chai - is an assertion library that is often used alongside Mocha. It provides functions and methods that help you compare the output of a certain test with its expected value. 
+
+4. Node js - is a open source cross-plateform java script run time enviornment that exicute java script code outside browser.
+5. NPM - is a packet manager for javascript programming language is a defalt packet manager for javascript run time enviornment called nodeJS.
+6. Packet.json - file is a  effective way to handle our dependencies(library) for our framework.
+		it is hub a of our project. If we delete nodemodule folder and then run npm install. Then all 
+		the dependencies or packages which are listed in package.json file will be download with other defalt packages.
+7. All dependencies can be found on NodeModule Folder.
+8. Webdriverio packages are the library for us to construct our automation framework.
+9. Mocha package will be use to clearly structure our automation test script.
+10.selenium-standalone: A node based CLI library for launching Selenium with WebDrivers support. after installing
+	selenium-standalone package then install it command: ./node_modules/.bin/selenium-standalone install
+	and then start the selenium-standalone server command ./node_modules/.bin/selenium-standalone start.
+11. To execute dependencies ..need to execute from nodemodule .bin folder.
+12. In summary the WDI file handles all the hard work for us that WDIA file is simply a configuration file
+		that consigns settings which are passed on to our tests that the file can handle many types of configuration
+		in short configuration file store all over project settings.
+		
+13. We dont need to install chrome driver or mocha dependencies with webdriverIO. Because webdriverIO used chrome	
+	and chrome driver automatically through services. the chrome driver services that gets added by defalt when you run your configuration
+	setup takes care of getting a chrome driver instances started.
+	
+14. chromeDriver -v
+ChromeDriver 79.0.3945.36 (3582db32b33893869b8c1339e8f4d9ed1816f143-refs/branch-heads/3945@{#614})
+ "selenium-standalone": "^6.15.3",
+ "webdriverio": "^4.13.2"
+ ChromeDriver 2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e) on port 39659
+ 
+ 15. $ npm install wdio-selenium-standalone-service -save-dev
+		after this command we need not to start selenium-standalone server all the time. Before that we have to
+		add the selenium-standalone services in the wdio file and update package.json file. In package.json under script "test" we give our configuration file or how we want to execute the test case.
+16. https://www.chaijs.com/ for chai assertion.
+	
+17. Time out error also depend on your internet connection. thats why sometime test pass or sometime it fails.
+18. Need to define your own locators . learning https://www.w3schools.com/xml/xpath_syntax.asp
+19. Hooks Learn from https://mochajs.org/#hooks
+20. //form/input[@name='first_name']
+21. browser.setValue('//form/input[@name="first_name"]' , 'sonia');  // in this code first I tried with this  
+
+browser.setValue('//form/input[@name='first_name']' , 'sonia');
+Error:
+ERROR: missing ) after argument list
+chrome
+C:\sonia\udemy learning\webdriverioFramework\test\contactUsTest.js:7
+                browser.setValue('//form/input[@name='first_name']' , 'sonia');
+Learning : If we have to give quotes inner quotes should be "" like this and outer quotes should be like ''
+22. To trigger DEBUG commmand to run: $ DEBUG=true npm test -- --spec=test/contactUsTest.js
+23. BeforeEach , afterEach, before ,after these all are mocha hooks.
+24. Expect example:
+expect(enabled , "pumkin is").to.be.true;
+expect(enabled).to.be.true;
+expect(enabled).to.equal(true);
+expect(url).to.inclue("Contact-us", "Wrong url")  // if url not include Contact-us string then it returen second argument i.e error
+expect(isMessageExisted, 'Successful submit message does not exist').to.be.true;  // if assertion fails then it display the error message 'successful submit message does not exist'
+25.  $('//p[text() ="CLICK ME!"]');   // $ is a way to call en element.
+26. 
+Single Buffer
+If you have a single Buffer you can use its toString method that will convert all or part of the binary contents to a string using a specific encoding. 
+It defaults to utf8 if you don't provide a parameter, but I've explicitly set the encoding in this example.
+27. The JSON.parse() method parses a JSON string,
+const json = '{"result":true, "count":42}';
+const obj = JSON.parse(json);
+console.log(obj.count);
+// expected output: 42
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
+
+28. Execute is a command to inject java script into a code...
+29. POM phase-1 : centralized our selectors and improving our existing commands.
+Advantage: if selector change then we have to change everywhere it used.rather if we centralized it it will be eaiser to change only once.
+30:beforeSession : before instilizing the webdriver session. ex. delete the files.
+,before hook: before the execution starts. ex chai library
+after hook: after the test finish. ex: add error screenshots when the test fails and save locally.
+31. Jenkins:
+Jenkins enable us to automate the process of execute our project.
+During each exection jenkins writes something which is called build.
+We will be able to see what tests pass and what were the exceptions flagged during each of our projects executions by inspecting each build.
+Jenkins executes our tests  Jenkins will open up the browser as if  a normal user was actually interating with the website.
+Jenkins enable us to execute all framework on its own .
+We see the build weather all test pass or if we have any exception.
+Plugins in Jenkins:
+1.NodeJS Plugin executes NodeJS script as a build step.
+2. HTML Publisher: This plugin publishes HTML reports.
+3. Post build task: This plugin allows to execute a batch/shell task depending on the build log output.
+
+Configuration:
+1. Under global tool Configuration We need to install node.js in jenkins we chose automatically install option. and we also define the  packages to install globally.ex : bower@~1.8.0 grunt-cli@~1.2.0
+2. we need to point the location of node.js Because our framework built on nodeJS under jenkins configuration. (where we have saved nodejs locally). What happed the node version stored
+locally override the version we installed during point 1.
+
+3. Create a job.
+4. Under Advance go to Use custom workspace . and here link your project.(node_modules/bin) path.
+5. This project is parameterized- Under this mention the baseUlr.
+6. now we have to execute our test: 
+

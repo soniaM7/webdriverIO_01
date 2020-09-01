@@ -1,0 +1,2 @@
+ ager kisi application ki commands use karni hai window cmd mein to us application ki .exe ka path enviornment mein set karna padta hai. for example: Node.js ki commands, java ki commands.
+ 

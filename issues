@@ -1,0 +1,36 @@
+issue 1:
+
+Running test in mocha for the first time.(mergin individual test in describe) I was getting below error.
+
+But the other errors appears this time:
+
+$ ./node_modules/.bin/wdio
+
+FFFF
+
+0 passing (11.60s)
+
+4 failing
+
+Resolve: Changed sync option true to false in wdio.config file. 
+Reason: In v4 all commands are synchronous if you are using wdio."
+
+
+issue 2.
+
+In both it tests I mentioned pause 3000 sec. I was getting below error.
+
+Timeout of 10000ms exceeded. 
+
+Resolve: Reduce 3000 sec to 2000 sec in both it tests and it works fine.
+
+
+issue 3. browser.setValue('//form/input[@name="first_name"]' , 'sonia');  // in this code first I tried with this  
+
+browser.setValue('//form/input[@name='first_name']' , 'sonia');
+Error:
+ERROR: missing ) after argument list
+chrome
+C:\sonia\udemy learning\webdriverioFramework\test\contactUsTest.js:7
+                browser.setValue('//form/input[@name='first_name']' , 'sonia');
+Learning : If we have to give quotes inner quotes should be "" like this and outer quotes should be like ''

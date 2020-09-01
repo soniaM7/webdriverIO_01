@@ -1,0 +1,8 @@
+Software downloaded for the course
+1. gitbash
+2. node.js
+
+
+Dependencies
+1. webdriverio
+2. mocha
